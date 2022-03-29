@@ -1,0 +1,65 @@
+{% extends "nav.html" %}
+{% load static %}
+
+{% block content %}
+</html> -->
+<div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+        keyword:
+        <input type="radio" name="keyword" value="low">low
+        <input type="radio" name="keyword" value="high">high
+
+        <br>
+
+        competition:
+        <input type="radio" name="competition" value="low">low
+        <input type="radio" name="competition" value="high">high
+
+
+        <button type="button" onclick="callfunction()">
+            Submit
+        </button>
+
+        <br>
+    </div>
+</div>
+
+    <script>
+        function callfunction() {
+            let keyword = document.getElementsByName('keyword');
+            let competition = document.getElementsByName('competition');
+            let keywordval ;
+            let competitionval;
+            for (i = 0; i < keyword.length; i++) {
+                if (keyword[i].checked) {
+                    keywordval = keyword[i].value;
+                    console.log('keyword' + keywordval)
+                }
+                  
+            }
+            for (i = 0; i < competition.length; i++) {
+                if (competition[i].checked) {
+                    competitionval = competition[i].value;
+                    console.log('competition ' + competitionval)
+                }
+                  
+            }
+
+            if(keywordval == 'low' && competitionval == 'low'){
+                document.body.style.background = "yellow";
+            }
+            else if(keywordval == 'low' && competitionval == 'high'){
+                document.body.style.background = "red";
+            }
+            else if(keywordval == 'high' && competitionval == 'low'){
+                document.body.style.background = "green";
+            }
+            else{
+                document.body.style.background = "blue";
+            }
+        }
+
+    </script>
+
+</html>
+{% endblock %}

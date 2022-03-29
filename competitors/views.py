@@ -4,4 +4,5 @@ from django.contrib.auth.decorators import login_required
 from .models import *
 
 def competitors(request):
-    return render(request,'competitors.html')
+    competitors = Competitor.objects.all()
+    return render(request,'competitors.html',{'competitors':competitors})

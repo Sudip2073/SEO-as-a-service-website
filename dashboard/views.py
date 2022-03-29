@@ -7,3 +7,10 @@ from .models import *
 def dashboard(request):
     return render(request,'dashboard.html')
 
+def keyword(request):
+    return render(request,'key.html')
+
+
+
+
+
