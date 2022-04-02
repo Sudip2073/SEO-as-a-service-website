@@ -27,22 +27,17 @@
                 She asked a royal guard to take the princes to the forest and leave them there. Then the Queen went with them outside and told the guard to kill them both and bring their heart as a proof. The guard was shocked by the evil Queen’s order but he couldn’t disobey the royal order. He agreed and took the two princes with him to the forest. He told the elder prince, Shishir, about the Queen’s order and told them to run away from the evil Queen. The guard watched the Prince go into the forest. He killed two deers on his way back and took their hearts with him. He presented the hearts of the deer to the queen. Believing the hearts were of Shishir and Basanta, the evil queen rejoiced in the death of the prince.
                 
                 In the forest, two princes all alone and scared. The elder brother Shishir was in charge of the two-Prince team. He did everything to protect and feed his little brother Basanta.</h6> -->
-        
-                
-                    
                     <div class="container course-tab">
-                        
-                
                         <div class="page-title">
                             <h2 class="abc" style="text-align: center;">Competitors</h2>
                         </div>
-                
                         <div class="row course-list">
                             {% for i in competitors %}
                             <div class="single-course">
                                 <div class="sc-wrp">
                                     <div class="sc-img">
-                                        <img src={{i.Images.url}} alt="">
+                                        
+                                        <img src="{% if i.Images %}/static/assets/images{{i.Images.url}}{% else%}{% static 'assets/images/3.jpg' %}{% endif %}"  alt="">
                                         
                                     </div>
                                     <div class="sc-title">
@@ -54,17 +49,9 @@
                                     </div>
                                 </div>
                             </div>
-                            {% endfor %}
-                
-                            
-                
+                            {% endfor %}      
                         </div>
-                    </div>
-                    
-                
-                    
-                
+                    </div>     
         </div>
     </div>
-
 {% endblock %}
