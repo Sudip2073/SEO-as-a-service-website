@@ -9,5 +9,5 @@ class Competitor(models.Model):    #Subject i.e. Digital forensics
     backlink= models.CharField(max_length=100)  #Available year
     DA= models.CharField(max_length=100)
     SERP= models.CharField(max_length=100)
-    Images= models.ImageField(blank=True)
+    Images= models.ImageField(blank=True)    #The image size must have width of 742px and height of 461px
     file = models.FileField(upload_to='files',blank=True)
