@@ -33,7 +33,7 @@
                 <div class="video-block">
                   <div class="video-image">
                     <div class="img-overlay"></div>
-                    <img src="{{Mod.Images.url}}" alt="Image">
+                    <img src="{% if Mod.Images %}/static/assets/images{{Mod.Images.url}}{% else%}{% static 'assets/images/3.jpg' %}{% endif %}" alt="Image">
                   </div>
                 </div>
               </div>
