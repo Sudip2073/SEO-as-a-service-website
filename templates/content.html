@@ -49,52 +49,26 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              #loop chalayera if else laune
-              <td>
-                <div class="user-info">
-                
-                  <div class="user-info__basic">
-                    <h5 class="mb-0">Kiran Acharya</h5>
-                    <p class="text-muted mb-0">@kiranacharyaa</p>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <span class="active-circle bg-success"></span> Active
-              </td>
-              <td>Bangalore</td>
-            </tr>
-            <tr>
-              <td>
-                <div class="user-info">
-                
-                  <div class="user-info__basic">
-                    <h5 class="mb-0">Kiran Acharya</h5>
-                    <p class="text-muted mb-0">@kiranacharyaa</p>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <span class="active-circle bg-success"></span> Active
-              </td>
-              <td>Bangalore</td>
-            </tr>
-            <tr>
-              <td>
-                <div class="user-info">
-                
-                  <div class="user-info__basic">
-                    <h5 class="mb-0">Kiran Acharya</h5>
-                    <p class="text-muted mb-0">@kiranacharyaa</p>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <span class="active-circle bg-success"></span> Active
-              </td>
-              <td>Bangalore</td>
-            </tr>
+            
+            {% for a in keys %}
+            
+              {% if a.Competename == Mod.name %}
+                <tr>
+                  <!-- loop chalayera if else laune -->
+                  <td>
+                    <div class="user-info">
+                      <div class="user-info__basic">
+                        <h5 class="mb-0">{{a.Keyword}}</h5>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    {{a.Search}}
+                  </td>
+                  <td>{{a.Difficulty}}</td>
+                </tr>
+              {% endif %}
+            {% endfor %}
           </tbody>
         </table>
       </div>

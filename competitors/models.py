@@ -4,7 +4,7 @@ from django.forms import NullBooleanField
 
 # Create your models here.
 # Create your models here.
-class Competitor(models.Model):    #Subject i.e. Digital forensics
+class Competitor(models.Model):    
     name= models.CharField(max_length=100)
     description= models.TextField()
     Images= models.ImageField(blank=True)    #The image size must have width of 742px and height of 461px
