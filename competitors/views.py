@@ -16,3 +16,5 @@ def competitors_detail(request, name):
     return render(request, 'content.html',{
         'Mod': Mod,
     })
+
+    

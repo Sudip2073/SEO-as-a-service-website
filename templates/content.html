@@ -9,25 +9,22 @@
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style2.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style2.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style3.css' %}">
 </head>
 
 
 <body>
   <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
-    <div class="container">
-      <section class="main-content">
         <div class="container">
-          <br>
-          <br>
           <div class="box">
             <div class="row align-center">
               <div class="col-md-6">
                 <h1 class="display-4 font-weight-bold">{{Mod.name}}</h1>
                 <p class="text-muted">{{Mod.description}}</p>
-                <a href="#!" class="btn btn-primary">Backlink</a>
+                <!-- <a href="#!" class="btn btn-primary">Backlink</a>
                 <a href="#!" class="btn btn-primary">DA</a>
-                <a href="#!" class="btn btn-primary">SERP</a>
+                <a href="#!" class="btn btn-primary">SERP</a> -->
               </div>
               <div class="col-md-5 offset-md-1">
                 <div class="video-block">
@@ -39,14 +36,74 @@
               </div>
             </div>
           </div>
-        </div>
       </section>
     </div>
-
+    <section class="main-content">
+      <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Keyword</th>
+              <th>Search Volume</th>
+              <th>Keyword Difficulty</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              #loop chalayera if else laune
+              <td>
+                <div class="user-info">
+                
+                  <div class="user-info__basic">
+                    <h5 class="mb-0">Kiran Acharya</h5>
+                    <p class="text-muted mb-0">@kiranacharyaa</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <span class="active-circle bg-success"></span> Active
+              </td>
+              <td>Bangalore</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-info">
+                
+                  <div class="user-info__basic">
+                    <h5 class="mb-0">Kiran Acharya</h5>
+                    <p class="text-muted mb-0">@kiranacharyaa</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <span class="active-circle bg-success"></span> Active
+              </td>
+              <td>Bangalore</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-info">
+                
+                  <div class="user-info__basic">
+                    <h5 class="mb-0">Kiran Acharya</h5>
+                    <p class="text-muted mb-0">@kiranacharyaa</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <span class="active-circle bg-success"></span> Active
+              </td>
+              <td>Bangalore</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 	
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
 </body>
 </html>
 {% endblock %}   
