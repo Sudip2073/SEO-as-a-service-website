@@ -38,34 +38,41 @@
           </div>
       </section>
     </div>
-    
-    <!-- <section class="main-content"> -->
+    <section class="main-content">
       <div class="container">
-      <table class="table">
-            <tbody>
-              {% for j in diff %}
-                {% if j.comparename == Mod.name %}
-  
-                  <tr>
-                    <!-- loop chalayera if else laune -->
-                    <td>
-                      <div class="user-info">
-                        <div class="user-info__basic">
-                          <h5 class="mb-0">{{j.Parameter}}</h5>
-                        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Keyword</th>
+              <th>Search Volume</th>
+              <th>Keyword Difficulty</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            {% for a in keys %}
+            
+              {% if a.Competename == Mod.name %}
+                <tr>
+                  <!-- loop chalayera if else laune -->
+                  <td>
+                    <div class="user-info">
+                      <div class="user-info__basic">
+                        <h5 class="mb-0">{{a.Keyword}}</h5>
                       </div>
-                    </td>
-                    <td>
-                      {{j.Link_a}}
-                    </td>
-                    <td>{{j.Link_b}}</td>
-                  </tr>
-                {% endif %}
-              {% endfor %}
-            </tbody>
-      </table>
+                    </div>
+                  </td>
+                  <td>
+                    {{a.Search}}
+                  </td>
+                  <td>{{a.Difficulty}}</td>
+                </tr>
+              {% endif %}
+            {% endfor %}
+          </tbody>
+        </table>
       </div>
-    <!-- </section>    -->
+    </section>
 	
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -73,4 +80,4 @@
   
 </body>
 </html>
-{% endblock %}   
+{% endblock %} 
